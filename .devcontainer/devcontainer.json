@@ -1,10 +1,14 @@
 {
-	"name": "Dev Containers Debian Testing (slim)",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	
-	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
-	}
+  "name": "Debian Testing Devcontainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "extensions": [
+    "ms-vscode.cpptools", 
+    "ms-python.python"
+  ],
+  "remoteUser": "vscode"
 }

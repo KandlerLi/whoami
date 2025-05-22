@@ -1,6 +1,0 @@
-New config: ~/.p10k.zsh.
-Backup of ~/.zshrc: /tmp/.zshrc.zlaTOrNUCc.
-
-See ~/.zshrc changes:
-
-  diff /tmp/.zshrc.zlaTOrNUCc ~/.zshrc

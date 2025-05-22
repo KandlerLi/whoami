@@ -38,8 +38,5 @@ RUN brew install tfenv powerlevel10k
 
 COPY .p10k.zsh /home/vscode/
 COPY .zshrc /home/vscode/
-    
-#RUN sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' /home/vscode/.zshrc
-#RUN . $HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme
 
 WORKDIR /home/vscode 

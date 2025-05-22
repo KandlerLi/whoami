@@ -3,12 +3,9 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  "remoteUser": "vscode",
   "settings": {
-    "terminal.integrated.defaultProfile.linux": "bash"
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.fontFamily": "'MesloLGS NF'",
   },
-  "extensions": [
-    "ms-vscode.cpptools", 
-    "ms-python.python"
-  ],
-  "remoteUser": "vscode"
 }

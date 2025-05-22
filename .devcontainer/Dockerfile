@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     zsh \
     procps \
+    zsh-syntax-highlighting \
     && apt-get clean
 
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \

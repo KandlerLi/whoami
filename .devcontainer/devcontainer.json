@@ -1,4 +1,11 @@
 {
-  "image": "hub.docker.com/debian:testing-slim",
-  "features": {}
+  "name": "Debian Testing Devcontainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "vscode",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.fontFamily": "'MesloLGS NF'",
+  },
 }

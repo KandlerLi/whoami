@@ -4,8 +4,12 @@
     "dockerfile": "Dockerfile"
   },
   "remoteUser": "vscode",
-  "settings": {
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "terminal.integrated.fontFamily": "'MesloLGS NF'",
-  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.fontFamily": "'MesloLGS NF'"
+      }
+    }
+  }
 }

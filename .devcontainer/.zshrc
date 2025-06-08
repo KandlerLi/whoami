@@ -18,3 +18,7 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 
 ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+
+source <(ng completion script)
+export CHROME_BIN=/usr/bin/chromium

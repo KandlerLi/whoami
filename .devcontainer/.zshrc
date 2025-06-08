@@ -14,5 +14,7 @@ plugins=(
   alias-tips
 )
 
+export PATH="$HOME/.npm-global/bin:$PATH"
+
 ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh

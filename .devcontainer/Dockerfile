@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     zsh \
     procps \
+    chromium \
     && apt-get clean
 
 # Generate locale
@@ -50,5 +51,11 @@ RUN git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/cust
 # Copy user configs
 COPY .p10k.zsh /home/vscode/
 COPY .zshrc /home/vscode/
+
+# Install Frontend packages
+RUN mkdir "${HOME}/.npm-global"
+RUN npm config set prefix "${HOME}/.npm-global"
+RUN npm i -g @angular/cli
+RUN export CHROME_BIN=/usr/bin/chromium
 
 WORKDIR /home/vscode 

@@ -1,0 +1,38 @@
+<!-- Desktop Sidebar -->
+<nav class="hidden md:flex flex-col w-64 h-screen fixed top-0 left-0 border-r px-6 py-8">
+  <img class="w-48 mx-auto pb-8" src="logo_48.png"/>
+  <h1 class="text-2xl font-bold mb-12">Julian Kandler</h1>
+  <ul class="space-y-6 text-lg">
+    @for (item of items; track item.name) {
+      <li><a routerLink="{{item.link}}">{{ item.name }}</a></li>
+    }
+  </ul>
+<app-theme-switch></app-theme-switch>
+
+</nav>
+
+<!-- Mobile Navbar -->
+<nav class="md:hidden fixed top-0 left-0 right-0 shadow-md flex items-center justify-between px-4 py-3 z-50">
+  <img class="w-8" src="logo_8.png"/>
+  <button (click)="toggleMenu()" class="focus:outline-none">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+      @if (menuOpen) {
+        <path d="M6 18L18 6M6 6l12 12" />
+      } @else {
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      }
+    </svg>
+  </button>
+</nav>
+
+<!-- Mobile Slide-In Menu -->
+ @if (menuOpen) {
+<div class="md:hidden fixed top-16 left-0 w-full shadow-lg z-40">
+  <ul class="flex flex-col items-start space-y-4 px-6 py-4 text-lg">
+    @for (item of items; track item.name) {
+      <li><a routerLink="{{item.link}}" (click)="toggleMenu()">{{ item.name }}</a></li>
+    }
+  </ul>
+</div>
+ }

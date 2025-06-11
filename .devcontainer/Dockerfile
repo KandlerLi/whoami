@@ -56,5 +56,6 @@ COPY .zshrc /home/vscode/
 RUN mkdir "${HOME}/.npm-global"
 RUN npm config set prefix "${HOME}/.npm-global"
 RUN npm i -g @angular/cli
+RUN export CHROME_BIN=/usr/bin/chromium
 
 WORKDIR /home/vscode 

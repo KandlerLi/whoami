@@ -24,4 +24,9 @@ describe('Navbar', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+    it('should toggle the menu if fuction called', () => {
+    component.toggleMenu()
+    expect(component.menuOpen).toBeTruthy()
+  });
 });

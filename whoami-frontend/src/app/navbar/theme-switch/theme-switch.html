@@ -1,6 +1,6 @@
 
   <label class="cursor-pointer inline-block">
-  <input type="checkbox" class="sr-only peer" />
+  <input type="checkbox" class="sr-only peer" [checked]="isDarkMode"/>
   <div class="w-10 h-10 flex items-center justify-center text-gray-700 peer-checked:text-yellow-400 transition-colors" (click)="switchTheme()">
     <!-- Moon Icon (default visible) -->
     <svg class="w-6 h-6 peer-checked:hidden" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

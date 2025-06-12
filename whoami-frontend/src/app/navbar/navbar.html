@@ -14,16 +14,19 @@
 <!-- Mobile Navbar -->
 <nav class="md:hidden fixed top-0 left-0 right-0 shadow-md flex items-center justify-between px-4 py-3 z-50">
   <img class="w-8" src="logo_8.png"/>
-  <button (click)="toggleMenu()" class="focus:outline-none">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-         viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-      @if (menuOpen) {
-        <path d="M6 18L18 6M6 6l12 12" />
-      } @else {
-        <path d="M4 6h16M4 12h16M4 18h16" />
-      }
-    </svg>
-  </button>
+  <div>
+    <app-theme-switch></app-theme-switch>
+    <button (click)="toggleMenu()" class="focus:outline-none cursor-pointer">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        @if (menuOpen) {
+          <path d="M6 18L18 6M6 6l12 12" />
+        } @else {
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        }
+      </svg>
+    </button>
+  </div>
 </nav>
 
 <!-- Mobile Slide-In Menu -->

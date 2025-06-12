@@ -38,6 +38,14 @@ module.exports = function (config) {
         flags: ['--no-sandbox']
       }
     },
+    check: {
+      global: {
+        statements: 80,
+        branches: 80,
+        functions: 80,
+        lines: 80
+      }
+    },
     restartOnFileChange: true
   });
 };
